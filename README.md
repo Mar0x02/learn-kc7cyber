@@ -15,4 +15,4 @@ Tiap section/quiz KC7 punya folder sendiri di root:
 ```
 
 ## Daftar section
-- [section-1-enough-beef-for-a-burger](./section-1-enough-beef-for-a-burger/README.md) — in-progress
+- [section-1-enough-beef-for-a-burger](./section-1-enough-beef-for-a-burger/README.md) — done
