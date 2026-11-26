@@ -21,6 +21,29 @@ Alur ceritanya:
 ## Tables yang dipakai
 Lihat [notes.md](./notes.md)
 
+## Query yang dipakai
+Cari CEO OWL Records ([Q4](./q4.md)):
+```kql
+Employees
+| where role == "CEO"
+```
+
+Lihat url yang diakses operator dari IP mencurigakan ([Q5](./q5.md)-[Q8](./q8.md)):
+```kql
+InboundNetworkEvents
+| where timestamp between (datetime("2024-04-10T00:00:00") .. datetime("2024-04-11T00:00:00"))
+| where src_ip has "18.66.52.227"
+| project url
+```
+
+Cari aksi reset-password pake info yang bocor di verse ([Q12](./q12.md)):
+```kql
+InboundNetworkEvents
+| where timestamp between (datetime("2024-04-10T00:00:00") .. datetime("2024-04-11T00:00:00"))
+| where src_ip has "18.66.52.227"
+| where url has_any("washington", "fluffy")
+```
+
 ## Daftar question
 - [x] [Q1](./q1.md)
 - [x] [Q2](./q2.md)
